@@ -1,0 +1,57 @@
+---
+const steps = [
+  {
+    number: "1",
+    title: "Diagnóstico",
+    description: "O paciente é avaliado para identificar problemas e sintomas, auxiliando na compreensão das situações e sentimentos que ele vem enfrentando."
+  },
+  {
+    number: "2",
+    title: "Plano de Tratamento com Protocolos",
+    description: "Com base no diagnóstico, é elaborado um plano de tratamento personalizado. Protocolos específicos são selecionados conforme as necessidades do paciente."
+  },
+  {
+    number: "3",
+    title: "Direcionamento com Ferramentas Práticas",
+    description: "Durante as sessões, o paciente é orientado na aplicação das técnicas da TCC, incluindo a identificação e modificação de pensamentos negativos e comportamentos disfuncionais."
+  },
+  {
+    number: "4",
+    title: "Alta do Paciente",
+    description: "Quando os objetivos terapêuticos são alcançados e o paciente demonstra melhora significativa, a terapia é encerrada, permitindo que o paciente continue a aplicar as habilidades e ferramentas aprendidas de forma independente."
+  }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-serif font-semibold text-center mb-12 text-gray-800">O Método</h2>
+    
+    <div class="relative">
+      <div class="absolute left-8 md:left-1/2 h-full w-0.5 bg-[#D5D7C5]"></div>
+      
+      <div class="space-y-12 md:space-y-24">
+        {steps.map((step, index) => (
+          <div class={`flex items-start relative ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+            <div class={`absolute ${index % 2 === 0 ? 'left-0 md:left-[calc(50%-2rem)]' : 'left-0 md:left-[calc(50%-2rem)]'} top-8 z-10 w-16 h-16 bg-[#E8E9DE] border-4 border-[#D5D7C5] rounded-full flex items-center justify-center`}>
+              <span class="text-[#6B7B45] font-bold text-xl">{step.number}</span>
+            </div>
+            
+            <div class={`w-full md:w-1/2 pl-24 ${
+              index % 2 === 0 
+                ? 'md:pl-0 md:pr-24' 
+                : 'md:pl-24 md:pr-0'
+            }`}>
+              <div class="bg-[#E8E9DE] border-4 border-[#D5D7C5] rounded-xl p-8">
+                <h3 class="text-xl font-semibold mb-2 text-[#6B7B45]">{step.number}. {step.title}</h3>
+                <p class="text-[#6B7B45]">{step.description}</p>
+              </div>
+            </div>
+            
+            <div class="hidden md:block w-1/2"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section> 
