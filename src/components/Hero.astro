@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 ---
 <section class="min-h-[80vh] relative overflow-hidden">
   <!-- Background image with overlay -->
@@ -23,7 +24,7 @@
       </p>
 
       <div class="pt-4">
-        <a href="/book" class="inline-block px-8 py-3 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-green-800 transition-all">
+        <a href="/agendar" class="inline-block px-8 py-3 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-green-800 transition-all">
           Agende sua consulta
         </a>
       </div>
@@ -35,11 +36,13 @@
 
     <!-- Right column --> 
     <div class="flex-1 relative">
-      <div class="aspect-[4/5] rounded-[40%] overflow-hidden">
-        <img 
+      <div class="rounded-[40px] overflow-hidden border-4 border-[#D5D7C5]">
+        <Image
           src="/images/denile_bk2.png" 
-          alt="Massage therapy session"
-          class="w-full h-full object-cover"
+          alt="Dra. Denile Oliveira"
+          width={600}
+          height={600}
+          class="w-full h-auto"
         />
       </div>
     </div>
