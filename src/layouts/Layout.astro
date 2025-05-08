@@ -36,7 +36,7 @@ const { title = 'Wellness Center - Achieve Optimal Wellbeing' } = Astro.props;
 		<link rel="canonical" href="https://seivasana.com.br/" />
 	</head>
 	<body class="antialiased bg-gray-50 overflow-x-hidden">
-		<Header />
+		<Header client:load />
 		<main>
 			<slot />
 		</main>
