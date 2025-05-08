@@ -1,5 +1,5 @@
-<header class="fixed w-full py-6 px-8 z-50 bg-white shadow-md border-b border-gold">
-  <div class="max-w-7xl mx-auto flex justify-between items-center">
+<header class="fixed w-full py-6 px-8 z-50 bg-white shadow-md border-b border-gold overflow-x-hidden">
+  <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
     <div class="flex items-center gap-3">
       <img src="/images/logo.png" alt="Logo Dr. Denile Oliveira" class="h-12 w-auto">
       <a href="/" class="text-2xl font-serif text-primary font-bold">Seiva Sana</a>
@@ -13,7 +13,7 @@
         </svg>
       </button>
       <!-- Menu -->
-      <ul :class="{'block': open, 'hidden': !open}" class="absolute right-0 top-12 bg-white shadow-lg rounded-lg p-6 space-y-4 md:space-y-0 md:static md:flex md:gap-8 md:bg-transparent md:shadow-none md:p-0 md:rounded-none md:items-center md:translate-y-0 transition-all duration-300 ease-in-out w-56 md:w-auto z-50 md:z-auto hidden md:flex">
+      <ul :class="{'block': open, 'hidden': !open}" class="absolute right-0 top-12 bg-white shadow-lg rounded-lg p-6 space-y-4 md:space-y-0 md:static md:flex md:gap-8 md:bg-transparent md:shadow-none md:p-0 md:rounded-none md:items-center md:translate-y-0 transition-all duration-300 ease-in-out w-screen max-w-full md:w-auto z-50 md:z-auto hidden md:flex overflow-x-hidden">
         <li><a href="#desafios" class="text-primary hover:text-accent font-sans transition-colors">Desafios</a></li>
         <li><a href="#metodo" class="text-primary hover:text-accent font-sans transition-colors">Método</a></li>
         <li><a href="#beneficios" class="text-primary hover:text-accent font-sans transition-colors">Benefícios</a></li>
