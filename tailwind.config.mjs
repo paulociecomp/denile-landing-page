@@ -4,14 +4,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        green: {
-          50: '#F2F7F5',
-          100: '#EAF3ED',
-          200: '#C2D3CB',
-          600: '#90A59C',
-          800: '#2F3E37',
-          900: '#1A2420',
+        primary: {
+          DEFAULT: '#4E5D3A',
         },
+        secondary: {
+          DEFAULT: '#A08C6B',
+        },
+        accent: {
+          DEFAULT: '#E07A5F',
+        },
+        gold: {
+          DEFAULT: '#D4B483',
+        },
+        bg: {
+          light: '#F6F5F2',
+          dark: '#223047',
+        },
+        text: {
+          main: '#2D2D2D',
+          secondary: '#6B7B45',
+        },
+        white: '#FFFFFF',
       },
     },
   },

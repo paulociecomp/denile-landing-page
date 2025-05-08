@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 ---
-<section class="min-h-[80vh] relative overflow-hidden">
+<section class="min-h-[80vh] relative overflow-hidden bg-bg-light">
   <!-- Background image with overlay -->
   <div class="absolute inset-0">
     <img 
@@ -9,34 +9,34 @@ import { Image } from 'astro:assets';
       alt="Background"
       class="w-full h-full object-cover"
     />
-    <div class="absolute inset-0 bg-[#0B2B40] opacity-60"></div>
+    <div class="absolute inset-0 bg-bg-dark opacity-70"></div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-8 py-32 flex items-center gap-12">
     <!-- Left column -->
     <div class="flex-1 space-y-8">
-      <h1 class="font-serif text-5xl text-white leading-tight">
+      <h1 class="font-serif text-5xl text-white leading-tight drop-shadow-lg">
         Descubra o poder da Cannabis e recupere a esperança de viver
       </h1>
       
-      <p class="text-lg text-white max-w-xl">
+      <p class="text-lg text-white max-w-xl font-sans">
         Cannabis: um tratamento natural cientificamente comprovado para diversas condições de saúde.
       </p>
 
       <div class="pt-4">
-        <a href="https://wa.me/5591992167457" target="_blank" class="inline-block px-8 py-3 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-green-800 transition-all">
+        <a href="https://wa.me/5591992167457" target="_blank" class="inline-block px-8 py-3 rounded-full bg-accent text-white font-semibold shadow-lg hover:bg-gold hover:text-primary transition-all">
           Agende sua consulta
         </a>
       </div>
 
       <div class="pt-8">
-        <p class="font-cursive text-2xl text-white">Dr. Denile Oliveira</p>
+        <p class="font-cursive text-2xl text-gold">Dr. Denile Oliveira</p>
       </div>
     </div>
 
     <!-- Right column --> 
     <div class="flex-1 relative">
-      <div class="rounded-[40px] overflow-hidden border-4 border-[#D5D7C5]">
+      <div class="rounded-[40px] overflow-hidden border-4 border-gold">
         <Image
           src="/images/denile_bk2.png" 
           alt="Dra. Denile Oliveira"

@@ -19,7 +19,7 @@ const { title = 'Wellness Center - Achieve Optimal Wellbeing' } = Astro.props;
 		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	</head>
 	<body class="antialiased bg-gray-50">
@@ -33,16 +33,21 @@ const { title = 'Wellness Center - Achieve Optimal Wellbeing' } = Astro.props;
 <style is:global>
 	:root {
 		--font-serif: 'Playfair Display', serif;
-		--font-sans: 'Open Sans', sans-serif;
+		--font-sans: 'Inter', 'Lato', 'Open Sans', sans-serif;
 		--font-cursive: 'Great Vibes', cursive;
 	}
 
 	html {
 		font-family: var(--font-sans);
+		font-size: 18px;
+		line-height: 1.7;
+		color: #2D2D2D;
+		background-color: #F6F5F2;
 	}
 
 	.font-serif {
 		font-family: var(--font-serif);
+		font-weight: 700;
 	}
 
 	.font-cursive {

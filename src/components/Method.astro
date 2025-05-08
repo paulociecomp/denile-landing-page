@@ -24,18 +24,18 @@ const steps = [
 ---
 
 <section id="metodo" class="py-20 scroll-mt-24 relative bg-cover bg-center" style="background-image: url('/images/DSC_2128.jpg');">
-  <div class="absolute inset-0 bg-[#0B2B40] opacity-60"></div>
+  <div class="absolute inset-0 bg-bg-dark opacity-70"></div>
   <div class="container mx-auto px-4 relative z-10">
-    <h2 class="text-3xl font-serif font-semibold text-center mb-12 text-white">O Método</h2>
+    <h2 class="text-3xl font-serif font-semibold text-center mb-12 text-gold">O Método</h2>
     
     <div class="relative">
-      <div class="absolute left-8 md:left-1/2 h-full w-0.5 bg-[#D5D7C5]"></div>
+      <div class="absolute left-8 md:left-1/2 h-full w-0.5 bg-gold"></div>
       
       <div class="space-y-12 md:space-y-24">
         {steps.map((step, index) => (
           <div class={`flex items-start relative ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-            <div class={`absolute ${index % 2 === 0 ? 'left-0 md:left-[calc(50%-2rem)]' : 'left-0 md:left-[calc(50%-2rem)]'} top-8 z-10 w-16 h-16 bg-[#E8E9DE] border-4 border-[#D5D7C5] rounded-full flex items-center justify-center`}>
-              <span class="text-[#6B7B45] font-bold text-xl">{step.number}</span>
+            <div class={`absolute ${index % 2 === 0 ? 'left-0 md:left-[calc(50%-2rem)]' : 'left-0 md:left-[calc(50%-2rem)]'} top-8 z-10 w-16 h-16 bg-gold border-4 border-gold rounded-full flex items-center justify-center`}>
+              <span class="text-primary font-bold text-xl">{step.number}</span>
             </div>
             
             <div class={`w-full md:w-1/2 pl-24 ${
@@ -43,9 +43,9 @@ const steps = [
                 ? 'md:pl-0 md:pr-24' 
                 : 'md:pl-24 md:pr-0'
             }`}>
-              <div class="bg-[#E8E9DE] border-4 border-[#D5D7C5] rounded-xl p-8">
-                <h3 class="text-xl font-semibold mb-2 text-[#6B7B45]">{step.number}. {step.title}</h3>
-                <p class="text-[#6B7B45]">{step.description}</p>
+              <div class="bg-white border-4 border-gold rounded-xl p-8">
+                <h3 class="text-xl font-semibold mb-2 text-primary font-serif">{step.number}. {step.title}</h3>
+                <p class="text-text-main font-sans">{step.description}</p>
               </div>
             </div>
             
