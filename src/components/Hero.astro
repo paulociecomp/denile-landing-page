@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 ---
-<section class="min-h-[80vh] relative overflow-hidden bg-bg-light">
-  <!-- Background image with overlay -->
-  <div class="absolute inset-0">
+<section class="min-h-[80vh] relative overflow-hidden bg-bg-light" x-data="{ y: 0 }" x-init="window.addEventListener('scroll', () => { y = window.scrollY })">
+  <!-- Background image com parallax -->
+  <div class="absolute inset-0 will-change-transform" :style="`transform: translateY(${y * 0.3}px);`">
     <img 
       src="/images/denile_bk1.png" 
       alt="Background"
