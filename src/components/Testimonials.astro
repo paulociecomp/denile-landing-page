@@ -1,0 +1,71 @@
+---
+// Remover JS do frontmatter, migrar para Alpine.js inline
+---
+
+<section id="depoimentos" class="py-20 bg-transparent">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-serif text-center mb-10 text-[#0B2B40]">
+      O que nossos pacientes <span class="font-bold">dizem sobre nós:</span>
+    </h2>
+    <div class="flex justify-center">
+      <div class="relative w-full max-w-2xl" x-data="{
+        testimonials: [
+          { name: 'ANA LIMA', role: 'ESTUDANTE', text: 'Espero que muitas pessoas tenham a chance de se beneficiar de seu trabalho e bom humor.', rating: 5 },
+          { name: 'CARLOS SOUZA', role: 'ENGENHEIRO', text: 'Profissional atenciosa, dedicada e muito competente. Recomendo de olhos fechados!', rating: 5 },
+          { name: 'MARIANA ALVES', role: 'EMPRESÁRIA', text: 'O atendimento foi excelente e o resultado superou minhas expectativas.', rating: 5 }
+        ],
+        current: 0,
+        interval: null,
+        next() { this.current = (this.current + 1) % this.testimonials.length },
+        prev() { this.current = (this.current - 1 + this.testimonials.length) % this.testimonials.length },
+        start() { this.interval = setInterval(() => this.next(), 5000) },
+        stop() { clearInterval(this.interval) },
+        init() { this.start() },
+        destroy() { this.stop() }
+      }" x-init="init()" @mouseenter="stop()" @mouseleave="start()" @destroy="destroy()">
+        <!-- Balão de fala -->
+        <div class="absolute -left-6 top-1/2 -translate-y-1/2 z-10 cursor-pointer select-none" aria-label="Anterior" tabindex="0" @click="prev()">
+          <svg class="w-8 h-8 text-[#E08C8C]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </div>
+        <div class="absolute -right-6 top-1/2 -translate-y-1/2 z-10 cursor-pointer select-none" aria-label="Próximo" tabindex="0" @click="next()">
+          <svg class="w-8 h-8 text-[#E08C8C]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="relative">
+            <div class="bg-[#E08C8C] rounded-3xl p-2 pb-0 shadow-lg">
+              <div class="relative bg-[#18344A] rounded-2xl px-8 py-10 min-w-[320px] md:min-w-[500px] max-w-full text-white flex flex-col items-center">
+                <svg class="absolute left-6 top-6 w-10 h-10 text-[#E08C8C]" fill="currentColor" viewBox="0 0 24 24"><path d="M9.17 8.41A5.5 5.5 0 0 0 2 14v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H6.5a3.5 3.5 0 0 1 2.67-3.41z"/></svg>
+                <svg class="absolute right-6 top-6 w-10 h-10 text-[#E08C8C]" fill="currentColor" viewBox="0 0 24 24"><path d="M14.83 8.41A5.5 5.5 0 0 1 22 14v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h1.5a3.5 3.5 0 0 0-2.67-3.41z"/></svg>
+                <div class="flex flex-col items-center">
+                  <div class="flex items-center -mt-12 mb-2">
+                    <div class="bg-white rounded-full p-1 shadow-md flex items-center justify-center">
+                      <svg width="40" height="40" viewBox="0 0 48 48"><g><circle cx="24" cy="24" r="24" fill="#fff"/><text x="24" y="32" text-anchor="middle" font-size="32" font-family="Arial" fill="#4285F4">G</text></g></svg>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <span class="block text-lg font-bold tracking-wide" x-text="testimonials[current].name"></span>
+                    <span class="block text-xs text-gray-300 mb-4" x-text="testimonials[current].role"></span>
+                    <p class="text-lg font-light leading-relaxed max-w-xl mx-auto mb-4">
+                      <span class="font-semibold">“</span><span x-text="testimonials[current].text"></span><span class="font-semibold">”</span>
+                    </p>
+                    <div class="flex justify-center gap-1 mb-2">
+                      <template x-for="i in testimonials[current].rating">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 0 0 .95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 0 0-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 0 0-1.176 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 0 0-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 0 0 .95-.69l1.286-3.967z"/></svg>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-12 h-12 bg-[#E08C8C] rounded-bl-3xl -mt-6 ml-10"></div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-6 gap-2">
+            <template x-for="(t, idx) in testimonials">
+              <span :class="`w-3 h-3 rounded-full ${current === idx ? 'bg-[#E08C8C]' : 'bg-[#D5D7C5]'}`"></span>
+            </template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
