@@ -21,7 +21,7 @@
         interval: null,
         next() { this.current = (this.current + 1) % this.testimonials.length },
         prev() { this.current = (this.current - 1 + this.testimonials.length) % this.testimonials.length },
-        start() { this.interval = setInterval(() => this.next(), 5000) },
+        start() { this.interval = setInterval(() => this.next(), 10000) },
         stop() { clearInterval(this.interval) },
         init() { this.start() },
         destroy() { this.stop() }
