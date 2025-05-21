@@ -1,0 +1,51 @@
+---
+// FAQ de Cannabis Medicinal - Seiva Sana
+const faqs = [
+  {
+    q: "Cannabis medicinal é a mesma coisa que fumar maconha?",
+    a: "Não. O tratamento com cannabis medicinal é feito com substâncias extraídas da planta, em formas controladas como óleos, cápsulas ou vaporizadores. A dosagem e o tipo de canabinoide (como o CBD ou o THC) são definidos por um(a) médico(a), respeitando seu diagnóstico, histórico de saúde e objetivos terapêuticos. Aqui na Seiva Sana, a proposta é personalizada, segura e amparada pela ciência."
+  },
+  {
+    q: "Quais doenças ou sintomas a cannabis pode tratar?",
+    a: "A cannabis tem demonstrado benefícios no controle de dores crônicas, ansiedade, insônia, epilepsia, autismo, fibromialgia, endometriose e outros. A planta atua no nosso sistema endocanabinoide, um sistema natural do corpo que regula funções como humor, sono, apetite, memória e imunidade. Cada tratamento é único e respeita sua história e seu corpo."
+  },
+  {
+    q: "Vou ficar 'chapado' com o tratamento?",
+    a: "Não necessariamente. O tratamento pode ser feito com compostos não psicoativos, como o CBD, que não alteram a percepção. Quando o THC é indicado, ele é usado em doses precisas, com finalidade terapêutica. Tudo é feito com acompanhamento médico, respeitando o seu bem-estar físico, mental e espiritual."
+  },
+  {
+    q: "A cannabis é legalizada? Vou ter problemas com a justiça?",
+    a: "No Brasil, o uso medicinal da cannabis é legalizado com prescrição médica e autorização da Anvisa. A Seiva Sana segue todos os protocolos legais, garantindo um tratamento seguro, ético e dentro da regulamentação. Inclusive, já existem milhares de pacientes autorizados no país."
+  },
+  {
+    q: "Em quanto tempo vou sentir os efeitos do tratamento?",
+    a: "O tempo de resposta varia de pessoa para pessoa. Alguns pacientes percebem melhora em poucos dias, outros levam semanas. Tudo depende do seu quadro clínico, da resposta do seu organismo e da regularidade do uso. O acompanhamento constante é essencial para ajustar doses e garantir os melhores resultados."
+  },
+  {
+    q: "Quanto tempo dura o tratamento?",
+    a: "O tempo que você precisar e/ou quiser. O acompanhamento inicial dura 2 meses, com um valor único, incluindo consulta inicial, início e acompanhamento do tratamento e uma consulta de retorno. Nesse período, normalmente, você já irá sentir melhora dos sintomas e saber qual é a sua dose terapêutica, que será mantida nos meses seguintes, com a renovação de uma receita válida por 3 meses. O objetivo do acompanhamento é proporcionar autonomia no uso do medicamento, ensinando como ajustar a dose com segurança, conforme a necessidade, sem exigir acompanhamento médico contínuo."
+  }
+];
+---
+
+<section id="faq" class="py-20 bg-bg-light scroll-mt-24">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row gap-12 items-start">
+      <div class="md:w-1/3">
+        <h2 class="text-3xl font-serif font-bold text-primary mb-6 md:text-right text-left">
+          Perguntas<br />Frequentes
+        </h2>
+      </div>
+      <div class="md:w-2/3 w-full">
+        <ul class="space-y-10">
+          {faqs.map(faq => (
+            <li class="bg-white rounded-2xl shadow p-6 border-l-4 border-gold">
+              <h3 class="text-xl font-serif font-bold text-primary mb-2">{faq.q}</h3>
+              <p class="text-text-main text-lg font-sans">{faq.a}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section> 
