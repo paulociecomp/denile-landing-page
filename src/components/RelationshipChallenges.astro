@@ -46,7 +46,7 @@ const symptoms = [
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       {symptoms.map((s) => (
-        <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow flex items-start gap-4 h-full">
+        <div class="bg-[#FAF8F4] border border-[#E7DFD1] rounded-3xl shadow-sm p-6 hover:shadow-md hover:-translate-y-0.5 transition duration-200 flex items-start gap-4 h-full">
           <div class="shrink-0 inline-flex items-center justify-center bg-gold/30 rounded-full p-3 mt-1">
             {s.icon === "moon" && (
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
@@ -81,8 +81,8 @@ const symptoms = [
             )}
           </div>
           <div>
-            <h3 class="text-primary font-semibold text-2xl mb-3 font-serif text-balance">{s.title}</h3>
-            <p class="text-text-main font-sans">
+            <h3 class="text-primary font-semibold text-xl mb-3 font-serif text-balance">{s.title}</h3>
+            <p class="text-text-main font-sans text-sm leading-relaxed">
               {s.description}<sup class="text-[10px] font-semibold ml-0.5" style="color:#B5673A">{s.note}</sup>
             </p>
           </div>

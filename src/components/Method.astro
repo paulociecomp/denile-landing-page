@@ -26,8 +26,8 @@ const pillars = [
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       {pillars.map((p) => (
-        <div class="bg-[#FAF8F4] border border-[#E7DFD1] rounded-[24px] p-7 min-h-60 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200">
-          <div class="mb-4">
+        <div class="bg-[#FAF8F4] border border-[#E7DFD1] rounded-3xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200 flex items-start gap-4 h-full">
+          <div class="shrink-0 inline-flex items-center justify-center bg-gold/30 rounded-full p-3 mt-1">
             {p.icon === "user" && (
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -44,8 +44,10 @@ const pillars = [
               </svg>
             )}
           </div>
-          <h3 class="font-serif font-semibold text-lg mb-3 text-primary text-balance">{p.title}</h3>
-          <p class="font-sans text-sm leading-relaxed text-text-main">{p.description}</p>
+          <div>
+            <h3 class="font-serif font-semibold text-xl mb-3 text-primary text-balance">{p.title}</h3>
+            <p class="font-sans text-sm leading-relaxed text-text-main">{p.description}</p>
+          </div>
         </div>
       ))}
     </div>
