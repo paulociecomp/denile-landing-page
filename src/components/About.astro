@@ -1,16 +1,10 @@
 ---
 import { Image } from 'astro:assets';
-
-const credentials = [
-  "Graduação em Medicina pela Universidade do Estado do Pará",
-  "Pós-graduanda em Cannabis Medicinal pela SBEC",
-  "Certificada internacionalmente em Medicina Endocanabinóide pela WeCann Academy",
-];
 ---
 
 <section id="sobre" class="py-24 bg-bg-light scroll-mt-24">
   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
       <div class="w-full max-w-sm mx-auto md:max-w-none">
         <div class="aspect-[3/4] rounded-[120px] overflow-hidden border-2 border-gold">
           <Image
@@ -27,23 +21,35 @@ const credentials = [
         <h2 class="font-serif font-semibold text-4xl text-primary leading-tight">
           Dra. Denile Oliveira
         </h2>
-        <p class="mt-2 font-sans text-sm uppercase tracking-wide text-primary-dark">
-          Médica generalista
+        <p class="mt-2 font-sans text-sm font-medium text-primary-dark">
+          Médica clínica geral com ênfase em medicina endocanabinoide
         </p>
         <div class="mt-4 w-12 border-b border-[#E7DFD1]"></div>
 
-        <ul class="mt-6 space-y-3">
-          {credentials.map((item) => (
-            <li class="flex items-start gap-3">
-              <span class="mt-2 inline-block w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#C9826A"></span>
-              <span class="font-sans text-base leading-relaxed text-text-main">{item}</span>
-            </li>
-          ))}
-        </ul>
+        <div class="mt-6 space-y-4 font-sans text-base leading-relaxed text-text-main md:text-justify hyphens-auto">
+          <p>
+            Acredito em uma medicina que constrói pontes entre ciência, escuta e cuidado. Um olhar clínico que considera corpo, mente e subjetividade de forma integrada orienta minha forma de acompanhar cada pessoa.
+          </p>
+          <p>
+            Na Seiva Sana, a cannabis medicinal é utilizada como uma ferramenta terapêutica possível dentro de um cuidado mais humano, individualizado e conectado à busca por equilíbrio e qualidade de vida.
+          </p>
+        </div>
 
-        <p class="mt-6 font-sans text-base leading-relaxed text-text-main">
-          Já realizou milhares de atendimentos em todos os níveis de atenção em saúde e atualmente trabalha com atendimentos clínicos a crianças, adultos e idosos em urgência e atenção primária, de forma particular e no SUS.
+        <p class="mt-6 mb-6 font-sans text-sm italic text-text-main/70">
+          Se fizer sentido para você, o acompanhamento pode começar por aqui.
         </p>
+
+        <a
+          href="https://wa.me/5511943230906"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block rounded-full px-7 py-3 font-sans text-sm font-semibold transition-colors"
+          style="background:#D9896A;color:#F8F5EF"
+          onmouseover="this.style.background='#C97958'"
+          onmouseout="this.style.background='#D9896A'"
+        >
+          Agendar avaliação
+        </a>
       </div>
     </div>
   </div>
