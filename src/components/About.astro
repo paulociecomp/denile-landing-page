@@ -1,55 +1,50 @@
 ---
 import { Image } from 'astro:assets';
+
+const credentials = [
+  "Graduação em Medicina pela Universidade do Estado do Pará",
+  "Pós-graduanda em Cannabis Medicinal pela SBEC",
+  "Certificada internacionalmente em Medicina Endocanabinóide pela WeCann Academy",
+];
 ---
 
 <section id="sobre" class="py-24 bg-bg-light scroll-mt-24">
   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="relative">
-        <div class="rounded-[40px] overflow-hidden border-4 border-gold">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+      <div class="w-full max-w-sm mx-auto md:max-w-none">
+        <div class="aspect-[3/4] rounded-[120px] overflow-hidden border-2 border-gold">
           <Image
-            src="/images/denile.png" 
+            src="/images/denile.png"
             alt="Dra. Denile Oliveira"
             width={600}
-            height={600}
-            class="w-full h-auto"
+            height={800}
+            class="w-full h-full object-cover"
           />
         </div>
       </div>
-      
-      <div class="space-y-6">
-        <h2 class="text-3xl font-serif mb-6 text-primary">Denile Oliveira</h2>
-        <h3 class="text-xl text-primary font-sans">Médica generalista</h3>
-        
-        <div class="space-y-4">
-          <p class="text-text-main font-sans">Graduação em Medicina pela Universidade do Estado do Pará</p>
-            
-          <ul class="space-y-4">
-            <li class="flex items-start gap-2">
-              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="text-text-main font-sans">
-                Pós-graduanda em Cannabis Medicinal pela SBEC
-              </span>
+
+      <div>
+        <h2 class="font-serif font-semibold text-4xl text-primary leading-tight">
+          Dra. Denile Oliveira
+        </h2>
+        <p class="mt-2 font-sans text-sm uppercase tracking-wide text-primary-dark">
+          Médica generalista
+        </p>
+        <div class="mt-4 w-12 border-b border-[#E7DFD1]"></div>
+
+        <ul class="mt-6 space-y-3">
+          {credentials.map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-2 inline-block w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#C9826A"></span>
+              <span class="font-sans text-base leading-relaxed text-text-main">{item}</span>
             </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="text-text-main font-sans">
-                Certificada internacionalmente em Medicina Endocanabinóide pela WeCann Academy
-              </span>
-            </li>
-          </ul>
-          
-          <p class="mt-6 text-text-main font-sans">
-            Já realizou milhares de atendimentos em todos os níveis de atenção em saúde e atualmente trabalha com atendimentos clínicos a crianças, adultos e idosos em urgência e atenção primária, de forma particular e no SUS.
-          </p>
-        </div>
+          ))}
+        </ul>
+
+        <p class="mt-6 font-sans text-base leading-relaxed text-text-main">
+          Já realizou milhares de atendimentos em todos os níveis de atenção em saúde e atualmente trabalha com atendimentos clínicos a crianças, adultos e idosos em urgência e atenção primária, de forma particular e no SUS.
+        </p>
       </div>
     </div>
   </div>
-</section> 
+</section>

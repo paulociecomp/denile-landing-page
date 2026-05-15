@@ -3,37 +3,31 @@ const symptoms = [
   {
     title: "Dificuldade para dormir",
     description: "O sistema endocanabinoide participa da regulação do ciclo sono-vigília e do relaxamento físico, podendo auxiliar na qualidade do sono e nos despertares noturnos.",
-    note: "¹",
     icon: "moon",
   },
   {
     title: "Ansiedade e mente acelerada",
     description: "A modulação de receptores CB1 está associada a mecanismos relacionados ao estresse, resposta emocional e hiperativação mental.",
-    note: "²",
     icon: "bolt",
   },
   {
     title: "Humor e exaustão emocional",
     description: "A sinalização endocanabinoide participa de processos ligados à motivação, neuroplasticidade e regulação emocional.",
-    note: "³",
     icon: "sun",
   },
   {
     title: "Alterações de apetite",
     description: "O sistema endocanabinoide influencia mecanismos relacionados ao apetite, metabolismo energético e recompensa alimentar.",
-    note: "⁴",
     icon: "scale",
   },
   {
     title: "Dor e tensão muscular",
     description: "Canabinoides interagem com vias neuroinflamatórias envolvidas na modulação da dor e da tensão muscular persistente.",
-    note: "⁵",
     icon: "fire",
   },
   {
     title: "Sono não reparador e fadiga",
     description: "A regulação endocanabinoide está associada a processos de recuperação fisiológica e qualidade do descanso.",
-    note: "⁶",
     icon: "battery",
   },
 ];
@@ -81,9 +75,9 @@ const symptoms = [
             )}
           </div>
           <div>
-            <h3 class="text-primary font-semibold text-xl mb-3 font-serif text-balance">{s.title}</h3>
+            <h3 class="text-primary font-semibold text-lg mb-3 font-serif text-balance">{s.title}</h3>
             <p class="text-text-main font-sans text-sm leading-relaxed">
-              {s.description}<sup class="text-[10px] font-semibold ml-0.5" style="color:#B5673A">{s.note}</sup>
+              {s.description}
             </p>
           </div>
         </div>
@@ -91,7 +85,7 @@ const symptoms = [
     </div>
 
     <p class="text-xs text-text-main/60 font-sans text-center mt-16 max-w-2xl mx-auto pt-6 border-t border-gold/30">
-      ¹–⁶ Baseado em evidências científicas contemporâneas sobre o sistema endocanabinoide.
+      Conteúdo baseado em evidências científicas contemporâneas sobre o sistema endocanabinoide.
     </p>
   </div>
 </section>
