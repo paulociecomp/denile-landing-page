@@ -3,7 +3,7 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="py-8 font-sans" style="background:#4A5540">
-  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-3">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
     <a
       href="https://instagram.com/seivasana"
       target="_blank"
@@ -18,6 +18,15 @@ const currentYear = new Date().getFullYear();
       </svg>
       <span>@seivasana</span>
     </a>
-    <p class="text-xs text-white/60">&copy; {currentYear} Seiva Sana — Todos os direitos reservados.</p>
+
+    <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6 text-xs text-white/60">
+      <a href="/politica-de-privacidade" class="hover:text-white/90 hover:underline underline-offset-2 transition-colors">
+        Política de Privacidade
+      </a>
+      <a href="/termos-de-uso" class="hover:text-white/90 hover:underline underline-offset-2 transition-colors">
+        Termos de Uso
+      </a>
+      <span>&copy; {currentYear} Seiva Sana</span>
+    </div>
   </div>
 </footer>

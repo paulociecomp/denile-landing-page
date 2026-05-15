@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -40,6 +41,7 @@ const { title = 'Wellness Center - Achieve Optimal Wellbeing' } = Astro.props;
 		<main>
 			<slot />
 		</main>
+		<CookieBanner />
 	</body>
 </html>
 

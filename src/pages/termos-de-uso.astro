@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+
+const paragraphs = [
+  "As informações disponibilizadas neste site possuem finalidade exclusivamente informativa e educativa, não substituindo avaliação médica individualizada, atendimento de urgência ou acompanhamento profissional presencial quando necessário.",
+  "O uso da cannabis medicinal deve ocorrer de forma responsável, individualizada e dentro dos critérios clínicos e regulatórios aplicáveis a cada situação.",
+  "As condutas terapêuticas mencionadas neste site dependem de avaliação profissional, histórico clínico, contexto de saúde e necessidades específicas de cada pessoa.",
+  "A Seiva Sana se reserva o direito de atualizar, modificar ou remover conteúdos deste site a qualquer momento, sem aviso prévio, visando aprimoramento das informações e da experiência de navegação.",
+  "Ao acessar este site, a pessoa usuária declara estar ciente destes Termos de Uso e concorda com as condições aqui apresentadas.",
+];
+---
+
+<Layout title="Termos de Uso — Seiva Sana">
+  <article class="max-w-3xl mx-auto pt-32 pb-24 px-4">
+    <h1 class="font-serif font-semibold text-4xl md:text-5xl text-primary leading-tight">
+      Termos de Uso
+    </h1>
+    <div class="mt-6 w-12 border-b border-[#E7DFD1]"></div>
+    <div class="mt-8 space-y-5 font-sans text-base leading-relaxed text-text-main">
+      {paragraphs.map((p) => <p>{p}</p>)}
+    </div>
+  </article>
+  <Footer />
+</Layout>

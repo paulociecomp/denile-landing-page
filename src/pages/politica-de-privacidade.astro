@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+
+const paragraphs = [
+  "A Seiva Sana valoriza a privacidade, a confidencialidade e a proteção dos dados pessoais de todas as pessoas que acessam este site.",
+  "Ao navegar pela plataforma, algumas informações podem ser coletadas de forma automática, como dados de navegação, cookies, endereço IP, tipo de dispositivo e interações realizadas no site. Essas informações são utilizadas para melhorar a experiência de navegação, compreender métricas de acesso e aprimorar conteúdos e serviços oferecidos.",
+  "Informações fornecidas voluntariamente por meio de formulários, WhatsApp ou canais de contato poderão ser utilizadas exclusivamente para comunicação relacionada ao acompanhamento terapêutico, agendamentos e orientações solicitadas pela própria pessoa usuária.",
+  "A Seiva Sana não comercializa dados pessoais e busca adotar medidas razoáveis de segurança para proteção das informações compartilhadas.",
+  "Este site pode utilizar ferramentas de terceiros, como Google Analytics, Meta Pixel e serviços integrados de comunicação, que também podem utilizar cookies e tecnologias semelhantes para análise de navegação e desempenho.",
+  "Ao continuar utilizando este site, você concorda com esta Política de Privacidade e com o uso de cookies relacionados à experiência de navegação.",
+  "Em caso de dúvidas relacionadas à privacidade ou aos seus dados, entre em contato pelos canais oficiais disponibilizados pela Seiva Sana.",
+];
+---
+
+<Layout title="Política de Privacidade — Seiva Sana">
+  <article class="max-w-3xl mx-auto pt-32 pb-24 px-4">
+    <h1 class="font-serif font-semibold text-4xl md:text-5xl text-primary leading-tight">
+      Política de Privacidade
+    </h1>
+    <div class="mt-6 w-12 border-b border-[#E7DFD1]"></div>
+    <div class="mt-8 space-y-5 font-sans text-base leading-relaxed text-text-main">
+      {paragraphs.map((p) => <p>{p}</p>)}
+    </div>
+  </article>
+  <Footer />
+</Layout>
