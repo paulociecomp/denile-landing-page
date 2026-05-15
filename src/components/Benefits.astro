@@ -1,3 +1,12 @@
+---
+const benefits = [
+  { label: "Sono reparador", description: "Melhora da qualidade do descanso e recuperação física." },
+  { label: "Clareza mental", description: "Maior foco e organização nas atividades do cotidiano." },
+  { label: "Equilíbrio emocional", description: "Redução da sobrecarga mental e melhora do bem-estar emocional." },
+  { label: "Bem-estar físico", description: "Manejo mais confortável de dores persistentes e tensões musculares." },
+  { label: "Qualidade de vida", description: "Mais disposição para atividades cotidianas e autocuidado." },
+];
+---
 <section id="beneficios" class="relative py-20 bg-bg-light scroll-mt-24">
   <div class="bg-secondary text-white p-12 rounded-sm max-w-6xl mx-auto -mt-32 mb-32 relative z-10">
     <div class="border border-gold/30 p-8">
@@ -13,69 +22,29 @@
   </div>
 
   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-3xl font-serif mb-6 text-primary">Com a terapia canabinoide você irá:</h2>
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-5">
+        <h2 class="text-4xl font-serif font-semibold text-primary leading-tight">
+          Possíveis impactos na sua qualidade de vida:
+        </h2>
+        <p class="mt-4 text-sm text-text-main/70 font-sans">
+          Resultados que pacientes relatam ao longo do acompanhamento.
+        </p>
       </div>
-      
-      <div>
-        <div class="border border-gold rounded-3xl p-8 bg-white">
-          <ul class="space-y-6">
-            <li class="flex items-start gap-2">
-              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="text-text-main font-sans">
-                Precisar utilizar menos medicações alopáticas/convencionais;
-              </span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="text-text-main font-sans">
-                Ter mais disposição para realizar atividades cotidianas e/ou exercícios físicos;
-              </span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="text-text-main font-sans">
-                Menos sentimentos de preocupação e sobrecarga, levando a ter menos crises de ansiedade;
-              </span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="text-text-main font-sans">
-                Se sentir mais concentrado para seus afazeres;
-              </span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="text-text-main font-sans">
-                Alívio de dores que dificultam o relaxamento completo;
-              </span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <span class="text-text-main font-sans">
-                Sono mais reparador com diminuição da fadiga ao acordar;
-              </span>
-            </li>
+
+      <div class="md:col-span-7">
+        <div class="bg-[#FAF8F4] border border-[#E7DFD1] rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] p-8">
+          <ul class="divide-y divide-[#E7DFD1]">
+            {benefits.map((b) => (
+              <li class="py-5 first:pt-0 last:pb-0">
+                <h3 class="text-lg font-semibold font-serif text-primary leading-snug">{b.label}</h3>
+                <p class="text-sm leading-relaxed text-text-main/80 font-sans mt-1.5">{b.description}</p>
+              </li>
+            ))}
           </ul>
+          <div class="mt-4 pt-4 border-t border-[#E7DFD1]">
+            <p class="text-xs italic text-text-main/70 font-sans">* Possível redução da sobrecarga medicamentosa, quando clinicamente indicado.</p>
+          </div>
         </div>
       </div>
     </div>
