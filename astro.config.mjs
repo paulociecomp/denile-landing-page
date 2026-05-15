@@ -7,4 +7,9 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   integrations: [tailwind()],
   adapter: vercel({}),
+  vite: {
+    server: {
+      allowedHosts: ['.ngrok-free.dev', '.ngrok-free.app', '.ngrok.io'],
+    },
+  },
 });

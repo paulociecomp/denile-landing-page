@@ -1,57 +1,53 @@
 ---
-const steps = [
+const pillars = [
   {
-    number: "1",
-    title: "Diagnóstico",
-    description: "O paciente é avaliado para identificar problemas e sintomas, auxiliando na compreensão das situações e sentimentos que ele vem enfrentando."
+    title: "Avaliação centrada na pessoa",
+    description: "Escuta clínica da sua história, rotina, emoções e contexto de vida como base para um cuidado individualizado.",
+    icon: "user",
   },
   {
-    number: "2",
-    title: "Plano de Tratamento com Protocolos",
-    description: "Com base no diagnóstico, é elaborado um plano de tratamento personalizado. Protocolos específicos são selecionados conforme as necessidades do paciente."
+    title: "Análise clínica e direcionamento",
+    description: "Integração entre sintomas, histórico, exames e possibilidades terapêuticas, respeitando as necessidades de cada pessoa.",
+    icon: "clipboard",
   },
   {
-    number: "3",
-    title: "Direcionamento com Ferramentas Práticas",
-    description: "Após a consulta inicial, o paciente receberá todas as orientações pertinentes em relação ao seu tratamento com cannabis medicinal, visando o autoconhecimento da sua dose terapêutica específica."
+    title: "Plano terapêutico singular",
+    description: "Construção de um acompanhamento individualizado, incluindo cannabis medicinal quando houver indicação clínica.",
+    icon: "sparkles",
   },
-  {
-    number: "4",
-    title: "Alta do Paciente",
-    description: "Quando os objetivos terapêuticos são alcançados e o paciente demonstra melhora significativa, a terapia é encerrada, permitindo que o paciente continue a aplicar as habilidades e ferramentas aprendidas de forma independente."
-  }
 ];
 ---
 
 <section id="metodo" class="py-20 scroll-mt-24 bg-bg-light">
   <div class="container mx-auto px-4 relative z-10">
-    <h2 class="text-3xl font-serif font-semibold text-center mb-12 text-gold">O Método</h2>
-    
-    <div class="relative">
-      <div class="absolute left-8 md:left-1/2 h-full w-0.5 bg-gold"></div>
-      
-      <div class="space-y-12 md:space-y-24">
-        {steps.map((step, index) => (
-          <div class={`flex items-start relative ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-            <div class={`absolute ${index % 2 === 0 ? 'left-0 md:left-[calc(50%-2rem)]' : 'left-0 md:left-[calc(50%-2rem)]'} top-8 z-10 w-16 h-16 bg-gold border-4 border-gold rounded-full flex items-center justify-center`}>
-              <span class="text-primary font-bold text-xl">{step.number}</span>
-            </div>
-            
-            <div class={`w-full md:w-1/2 pl-24 ${
-              index % 2 === 0 
-                ? 'md:pl-0 md:pr-24' 
-                : 'md:pl-24 md:pr-0'
-            }`}>
-              <div class="bg-white border-4 border-gold rounded-xl p-8">
-                <h3 class="text-xl font-semibold mb-2 text-primary font-serif">{step.number}. {step.title}</h3>
-                <p class="text-text-main font-sans">{step.description}</p>
-              </div>
-            </div>
-            
-            <div class="hidden md:block w-1/2"></div>
+    <h2 class="text-3xl font-serif font-semibold text-center mb-12 text-primary-dark">
+      O cuidado se organiza em três pilares
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {pillars.map((p) => (
+        <div class="bg-[#FAF8F4] border border-[#E7DFD1] rounded-[24px] p-7 min-h-60 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200">
+          <div class="mb-4">
+            {p.icon === "user" && (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+            )}
+            {p.icon === "clipboard" && (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+              </svg>
+            )}
+            {p.icon === "sparkles" && (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+              </svg>
+            )}
           </div>
-        ))}
-      </div>
+          <h3 class="font-serif font-semibold text-lg mb-3 text-primary text-balance">{p.title}</h3>
+          <p class="font-sans text-sm leading-relaxed text-text-main">{p.description}</p>
+        </div>
+      ))}
     </div>
   </div>
-</section> 
+</section>
