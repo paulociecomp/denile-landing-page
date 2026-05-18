@@ -4,14 +4,14 @@ export const hydrate = "client:load";
 
 <header
   x-data="{ open: false }"
-  class="fixed w-full py-6 px-4 md:px-8 z-50 bg-white shadow-md border-b border-gold"
+  class="fixed w-full py-5 px-4 md:px-8 z-50 bg-white shadow-md border-b border-gold"
 >
   <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
     <div class="flex items-center gap-3">
       <img
         src="/images/logo.png"
         alt="Logo Dr. Denile Oliveira"
-        class="h-12 w-auto"
+        class="h-14 w-auto"
       />
       <a href="/" class="text-2xl font-serif text-primary"
         >Seiva Sana</a
@@ -47,42 +47,42 @@ export const hydrate = "client:load";
         <li>
           <a
             href="#desafios"
-            class="text-primary hover:text-primary-dark font-sans font-medium text-[15px] tracking-wide transition-colors"
+            class="nav-link text-primary font-sans font-semibold text-[15px] tracking-normal transition-colors"
             >Desafios</a
           >
         </li>
         <li>
           <a
             href="#metodo"
-            class="text-primary hover:text-primary-dark font-sans font-medium text-[15px] tracking-wide transition-colors"
+            class="nav-link text-primary font-sans font-semibold text-[15px] tracking-normal transition-colors"
             >Método</a
           >
         </li>
         <li>
           <a
             href="#beneficios"
-            class="text-primary hover:text-primary-dark font-sans font-medium text-[15px] tracking-wide transition-colors"
+            class="nav-link text-primary font-sans font-semibold text-[15px] tracking-normal transition-colors"
             >Benefícios</a
           >
         </li>
         <li>
           <a
             href="#depoimentos"
-            class="text-primary hover:text-primary-dark font-sans font-medium text-[15px] tracking-wide transition-colors"
+            class="nav-link text-primary font-sans font-semibold text-[15px] tracking-normal transition-colors"
             >Depoimentos</a
           >
         </li>
         <li>
           <a
             href="#faq"
-            class="text-primary hover:text-primary-dark font-sans font-medium text-[15px] tracking-wide transition-colors"
+            class="nav-link text-primary font-sans font-semibold text-[15px] tracking-normal transition-colors"
             >FAQ</a
           >
         </li>
         <li>
           <a
             href="#sobre"
-            class="text-primary hover:text-primary-dark font-sans font-medium text-[15px] tracking-wide transition-colors"
+            class="nav-link text-primary font-sans font-semibold text-[15px] tracking-normal transition-colors"
             >Sobre</a
           >
         </li>
@@ -90,7 +90,7 @@ export const hydrate = "client:load";
           <a
             href="https://wa.me/5591992167457"
             target="_blank"
-            class="inline px-6 py-2 rounded-full border border-accent text-accent hover:bg-accent hover:text-white font-semibold transition-all text-center"
+            class="inline ml-4 px-6 py-2 rounded-full border border-accent text-accent hover:bg-accent hover:text-white font-semibold transition-all text-center"
             >Agende sua consulta</a
           >
         </li>
@@ -157,6 +157,19 @@ export const hydrate = "client:load";
 </header>
 
 <style>
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 220ms ease, left 220ms ease;
+  }
+  .nav-link:hover::after { width: 100%; left: 0; }
+
   @media (max-width: 768px) {
     nav ul {
       position: absolute;
